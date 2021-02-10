@@ -1,0 +1,11 @@
+.technologists-input {
+  border: 1px solid #bfbfbf;
+  width: 100%;
+  color: #2c2c2c;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 12px 8px;
+  &::placeholder {
+    color: #a3a3a3;
+  }
+}

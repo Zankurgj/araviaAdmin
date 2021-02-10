@@ -1,0 +1,26 @@
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 0;
+  font-family: $mainfamily;
+}
+
+p {
+  margin: 0;
+}
+label {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  transition: color $base-duration $base-timing;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
