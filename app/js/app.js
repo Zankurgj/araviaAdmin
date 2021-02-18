@@ -103,3 +103,8 @@ except the current select box: */
 then close all select boxes: */
   document.addEventListener('click', closeAllSelect);
 };
+const onToggleReportSpoiler = (el, id) => {
+  $(el).toggleClass('open');
+  $(`#${id}`).slideToggle(200);
+  $(`#${id}`).toggleClass('hide');
+};

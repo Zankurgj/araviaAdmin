@@ -1,0 +1,125 @@
+{% extends "app/njk/layout/main.njk" %}
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-technologists-control">
+        <h2 class="h2-gray">Управление</h2>
+      </div>
+      <div class="col-technologists-description">
+        <h2 class="h2-gray">Описание</h2>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row row--technologists-main row--border">
+      <div class="col-technologists-control">
+        <div class="technologists-avatar" style="background-image: url('./images/dest/img/profile.png');"></div>
+        <div class="technologists-tabs">
+          <ul>
+            <li class="technologists-tabs-item technologists-tab-wrapper">
+              <a href="#" class="technologists-tab-text">Профиль</a>
+            </li>
+            <li class="technologists-tabs-item technologists-tab-wrapper">
+              <a href="#" class="technologists-tab-text">Отчеты</a>
+            </li>
+            <li class="technologists-tabs-item technologists-tab-wrapper">
+              <a href="#" class="technologists-tab-text">Аттестация</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-technologists-description">
+        <div class="technologists-tabs-block">
+          <h1 class="technologists-h2 technologists-tabs-block-h2">Отчеты технологов</h1>
+          <div class="technologists-report-head">
+            <p class="technologists-desc-subtitle">Технолог Иванова Ирина Ивановна</p>
+            <p class="technologists-desc-subtitle">г. Барнаул</p>
+            <button class="btn-main btn-main--small btn-spoiler-report open" onclick="onToggleReportSpoiler(this, 'report1')">
+              <span class="btn-spoiler-report-text-open">Свернуть отчеты</span>
+              <span class="btn-spoiler-report-text-close">Показать отчеты</span>
+            </button>
+          </div>
+          <div class="technologists-table-spoiler-wrapper" id="report1">
+            <table class="technologists-table">
+              <tr class="technologists-table-head">
+                <th>Номер отчета</th>
+                <th>Дата</th>
+                <th colspan="2">Наименование</th>
+              </tr>
+              {% for i in range(0, 4) %}
+                <tr>
+                  <td>№ ХХХХХХХ</td>
+                  <td>01.03.2020</td>
+                  <td>Отчет за март</td>
+                  <td align="right">
+                    <a href="#">Смотреть отчет</a>
+                  </td>
+                </tr>
+              {% endfor %}
+            </table>
+            <button class="btn-main btn-main--big btn--technologists-table-spoiler">Добавить отчет</button>
+          </div>
+
+          <div class="technologists-report-head">
+            <p class="technologists-desc-subtitle">Технолог Иванова Валентина Викторовна</p>
+            <p class="technologists-desc-subtitle">г. Казань</p>
+            <button class="btn-main btn-main--small btn-spoiler-report" onclick="onToggleReportSpoiler(this, 'report2')">
+              <span class="btn-spoiler-report-text-open">Свернуть отчеты</span>
+              <span class="btn-spoiler-report-text-close">Показать отчеты</span>
+            </button>
+          </div>
+          <div class="technologists-table-spoiler-wrapper hide" id="report2">
+            <table class="technologists-table">
+              <tr class="technologists-table-head">
+                <th>Номер отчета</th>
+                <th>Дата</th>
+                <th colspan="2">Наименование</th>
+              </tr>
+              {% for i in range(0, 4) %}
+                <tr>
+                  <td>№ ХХХХХХХ</td>
+                  <td>01.03.2020</td>
+                  <td>Отчет за март</td>
+                  <td align="right">
+                    <a href="#">Смотреть отчет</a>
+                  </td>
+                </tr>
+              {% endfor %}
+            </table>
+            <button class="btn-main btn-main--big btn--technologists-table-spoiler">Добавить отчет</button>
+          </div>
+
+          <div class="technologists-report-head">
+            <p class="technologists-desc-subtitle">Технолог Иванова Валентина Викторовна</p>
+            <p class="technologists-desc-subtitle">г. Казань</p>
+            <button class="btn-main btn-main--small btn-spoiler-report" onclick="onToggleReportSpoiler(this, 'report3')">
+              <span class="btn-spoiler-report-text-open">Свернуть отчеты</span>
+              <span class="btn-spoiler-report-text-close">Показать отчеты</span>
+            </button>
+          </div>
+          <div class="technologists-table-spoiler-wrapper hide" id="report3">
+            <table class="technologists-table">
+              <tr class="technologists-table-head">
+                <th>Номер отчета</th>
+                <th>Дата</th>
+                <th colspan="2">Наименование</th>
+              </tr>
+              {% for i in range(0, 4) %}
+                <tr>
+                  <td>№ ХХХХХХХ</td>
+                  <td>01.03.2020</td>
+                  <td>Отчет за март</td>
+                  <td align="right">
+                    <a href="#">Смотреть отчет</a>
+                  </td>
+                </tr>
+              {% endfor %}
+            </table>
+            <button class="btn-main btn-main--big btn--technologists-table-spoiler">Добавить отчет</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -33,12 +33,19 @@
       background-color: #dc2c7b;
     }
   }
-  .btn-main--small {
+  .btn-main--middle {
     padding: 10px 10px 12px 10px;
   }
   .btn-main--big {
     padding: 14px 10px 15px 10px;
     font-size: 24px;
+  }
+  .btn-main--small {
+    padding: 6px 10px 4px 10px;
+    font-size: 12px;
+    max-width: 162px;
+    width: 100%;
+    font-weight: normal;
   }
   .h2-gray {
     display: block;
@@ -281,6 +288,15 @@
     margin-top: 16px;
     margin-right: 12px;
   }
+  .technologists-main-btn--right {
+    margin-left: auto;
+  }
+  .technologists-main-table-btns-block {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 20px;
+  }
   .technologists-main-center-btn {
     display: block;
     margin: 35px auto;
@@ -290,5 +306,71 @@
     background-color: #f4f7f9;
     padding-top: 10px;
     padding-bottom: 25px;
+  }
+  .technologists-desc-subtitle {
+    font-size: 12px;
+    line-height: 24px;
+    color: #272727;
+  }
+  .btn-spoiler-report {
+    .btn-spoiler-report-text-open {
+      display: none;
+    }
+    &.open {
+      .btn-spoiler-report-text-close {
+        display: none;
+      }
+      .btn-spoiler-report-text-open {
+        display: inline-block;
+      }
+    }
+  }
+  .technologists-table-spoiler-wrapper {
+    margin-bottom: 20px;
+    &.hide {
+      display: none;
+    }
+  }
+  .technologists-report-head {
+    margin-bottom: 20px;
+  }
+  .technologists-checkbox {
+    @extend .visually-hidden;
+    &:checked + .technologists-checkbox-fake::after {
+      opacity: 1;
+    }
+  }
+  .technologists-checkbox-fake {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    flex: 0 0 auto;
+    border: 1px solid #592c82;
+    cursor: pointer;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 10px;
+      height: 10px;
+      background-color: #592c82;
+      opacity: 0;
+      transition: opacity $base-duration $base-timing;
+    }
+  }
+  .technologists-table-checkbox-text {
+    display: inline-block;
+    color: #592c82;
+    font-size: 24px;
+    font-weight: 300;
+    margin-left: 15px;
+    vertical-align: middle;
+  }
+  .btn--technologists-table-spoiler {
+    margin-top: 20px;
   }
 }
