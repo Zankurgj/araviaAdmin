@@ -27,6 +27,7 @@
   "dependencies": {
     "gulp-html-prettify": "0.0.1",
     "gulp-nunjucks-render": "^2.2.3",
+    "jquery.maskedinput": "^1.4.1",
     "slick-carousel": "^1.8.1"
   }
 }

@@ -22,25 +22,32 @@
       <div class="col-technologists-description">
         <div class="technologists-tabs-block">
           <h2 class="h2-gray h2--technologists-tab">Описание</h2>
-          <h1 class="technologists-h2 technologists-tabs-block-h2">Мои Отчеты</h1>
+          <h1 class="technologists-h2 technologists-tabs-block-h2">Мои Аттестации</h1>
           <table class="technologists-table">
             <tr class="technologists-table-head">
-              <th>Номер отчета</th>
-              <th>Дата</th>
-              <th colspan="2">Наименование</th>
+              <th>Наименование</th>
+              <th>Дата прохождения</th>
+              <th colspan="2">Дата действия до</th>
             </tr>
-            {% for i in range(0, 4) %}
+            {% for i in range(0, 3) %}
               <tr>
-                <td>№ ХХХХХХХ</td>
+                <td>Шугаринг и SPA-уход ARAVIA Professional</td>
                 <td>01.03.2020</td>
-                <td>Отчет за март</td>
-                <td align="right">
-                  <a href="#">Смотреть отчет</a>
+                <td>01.03.2021</td>
+                <td>
+                  <span>Действует</span>
                 </td>
               </tr>
             {% endfor %}
+            <tr class="text-pink">
+              <td>Шугаринг и SPA-уход ARAVIA Professional</td>
+              <td>01.03.2020</td>
+              <td>01.03.2021</td>
+              <td>
+                <button class="text-underline text-pink">Пройти аттестацию</button>
+              </td>
+            </tr>
           </table>
-          <button class="btn-main btn-main--big btn--technologists-table-spoiler">Добавить отчет</button>
         </div>
       </div>
     </div>

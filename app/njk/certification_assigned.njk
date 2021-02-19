@@ -1,0 +1,65 @@
+{% extends "app/njk/layout/main.njk" %}
+{% block content %}
+  <div class="container">
+    <div class="row row--technologists-main">
+      <div class="col-technologists-control">
+        <h2 class="h2-gray h2--technologists-tab">Управление</h2>
+        <div class="technologists-avatar" style="background-image: url('./images/dest/img/profile.png');"></div>
+        <div class="technologists-tabs">
+          <ul>
+            <li class="technologists-tabs-item technologists-tab-wrapper">
+              <a href="#" class="technologists-tab-text">Профиль</a>
+            </li>
+            <li class="technologists-tabs-item technologists-tab-wrapper">
+              <a href="#" class="technologists-tab-text">Отчеты</a>
+            </li>
+            <li class="technologists-tabs-item technologists-tab-wrapper">
+              <a href="#" class="technologists-tab-text">Аттестация</a>
+              <span class="technologists-tabs-item-counter">1</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-technologists-description">
+        <div class="technologists-tabs-block">
+          <h2 class="h2-gray h2--technologists-tab">Описание</h2>
+          <h1 class="technologists-h2 technologists-tabs-block-h2">Мои Аттестации</h1>
+          <table class="technologists-table">
+            <tr class="technologists-table-head">
+              <th>Наименование</th>
+              <th>Дата прохождения</th>
+              <th colspan="2">Дата действия до</th>
+            </tr>
+            {% for i in range(0, 3) %}
+              <tr>
+                <td>Шугаринг и SPA-уход ARAVIA Professional</td>
+                <td>01.03.2020</td>
+                <td>01.03.2021</td>
+                <td>
+                  <span>Действует</span>
+                </td>
+              </tr>
+            {% endfor %}
+            <tr class="text-pink">
+              <td>Шугаринг и SPA-уход ARAVIA Professional</td>
+              <td>01.03.2020</td>
+              <td>01.03.2021</td>
+              <td>
+                <span class="text-underline">Аттестация назначена</span>
+              </td>
+            </tr>
+          </table>
+          <div class="technologists-tabs-info-inner">
+            <p class="technologists-tabs-info-text">Атестация по курсу:
+              <span class="text-purple">Карбоновый пилинг-комплекс ARAVIA Professional - назначена</span></p>
+            <p class="technologists-tabs-info-text">Дата и время проведения аттестации:
+              <span class="text-purple">25.12.2020, 10:00 по МСК</span></p>
+            <p class="technologists-tabs-info-text">Преподаватель:
+              <span class="text-purple">Прокопенко Юлия</span></p>
+            <button class="btn-main btn-main--small">Подтверждаю</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   customSelectInit();
+  $('#phone').mask('+7(999) 999-99-99');
 });
 
 const onShowTab = (el, id) => {

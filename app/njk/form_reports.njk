@@ -1,18 +1,9 @@
 {% extends "app/njk/layout/main.njk" %}
 {% block content %}
   <div class="container">
-    <div class="row">
-      <div class="col-technologists-control">
-        <h2 class="h2-gray">Управление</h2>
-      </div>
-      <div class="col-technologists-description">
-        <h2 class="h2-gray">Описание</h2>
-      </div>
-    </div>
-  </div>
-  <div class="container">
     <div class="row row--technologists-main row--border">
       <div class="col-technologists-control">
+        <h2 class="h2-gray h2--technologists-tab">Управление</h2>
         <div class="technologists-avatar" style="background-image: url('./images/dest/img/profile.png');"></div>
         <div class="technologists-tabs">
           <ul>
@@ -30,6 +21,7 @@
       </div>
       <div class="col-technologists-description">
         <div class="technologists-tabs-block">
+          <h2 class="h2-gray h2--technologists-tab">Описание</h2>
           <h1 class="technologists-h2 technologists-tabs-block-h2">Мои Отчеты</h1>
           <table class="technologists-table">
             <tr class="technologists-table-head">

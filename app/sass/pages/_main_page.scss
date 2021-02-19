@@ -63,7 +63,7 @@
     color: $accent;
   }
   .technologists-avatar {
-    margin: 10px 0 20px 5px;
+    margin: 0 0 20px 5px;
     width: 150px;
     height: 150px;
     background-repeat: no-repeat;
@@ -71,10 +71,28 @@
     border: 2px solid #abc4d0;
   }
   .technologists-tabs-item {
+    position: relative;
+    display: table;
     margin-bottom: 10px;
     &:last-child {
       margin-bottom: 0;
     }
+  }
+  .technologists-tabs-item-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    color: #fff;
+    background-color: #ff0081;
+    border-radius: 50%;
+    line-height: 1px;
+    font-size: 12px;
   }
   .technologists-tab-wrapper {
     position: relative;
@@ -107,11 +125,11 @@
       color: #592c82;
     }
   }
-  .technologists-tabs-block {
-    padding: 22px 0 0 0;
-  }
   .technologists-tabs-block-h2 {
     margin-bottom: 20px;
+  }
+  .h2--technologists-tab {
+    margin-bottom: 22px;
   }
   .technologists-table {
     width: 100%;
@@ -133,12 +151,25 @@
     td {
       padding: 10px 20px;
     }
-    a {
+    a,
+    button {
       color: $accent;
       &:hover {
         color: rgba($color: $accent, $alpha: 0.8);
       }
     }
+    .text-pink {
+      color: #ff0781;
+    }
+  }
+  .text-pink {
+    color: #ff0781;
+  }
+  .text-underline {
+    text-decoration: underline;
+  }
+  .text-purple {
+    color: #592c82;
   }
   .row--border {
     border-bottom: 1px solid #bfbfbf;
@@ -374,5 +405,135 @@
   }
   .btn--technologists-table-spoiler {
     margin-top: 20px;
+  }
+  .technologists-lk-input-text {
+    display: inline-block;
+    color: #592c82;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 2px;
+  }
+  .technologists-lk-input-text--edit-icon {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      right: -50px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url('../images/dest/icons/edit.png');
+    }
+  }
+  .technologists-lk-input {
+    border: none;
+    width: 100%;
+    color: #272727;
+    font-size: 16px;
+    font-weight: 300;
+    border-bottom: 2px solid #d2d2d2;
+    padding: 12px 0;
+    background-color: transparent;
+    &:focus {
+      border-color: 2px solid #cccccc;
+    }
+  }
+  .technologists-lk-input--no-border {
+    border: none;
+  }
+  .technologists-lk-form-input-row {
+    flex-wrap: wrap;
+    max-width: 530px;
+  }
+  .technologists-lk-form-col--1 {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  .technologists-lk-form-col--2 {
+    flex-basis: calc((100% - 24px) / 2);
+    max-width: calc((100% - 24px) / 2);
+    margin-right: 24px;
+  }
+  .technologists-lk-form-col {
+    margin-bottom: 20px;
+    &:nth-child(3) {
+      margin-right: 0;
+    }
+  }
+  .technologists-lk-gray-col {
+    flex-basis: calc((100% - 24px) / 2);
+    max-width: calc((100% - 24px) / 2);
+    margin-right: 24px;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+  .technologists-lk-gray-wrapper {
+    background-color: #f4f7f9;
+    padding: 20px 30px;
+  }
+  .technologists-lk-gray-title {
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #592c82;
+    margin-bottom: 20px;
+  }
+  .technologists-tabs-toggle-btn {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 10px 70px 15px 6px;
+    background-color: #e6e0ec;
+    text-align: left;
+    margin-bottom: 20px;
+    &:hover {
+      opacity: 0.8;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%) rotate(-90deg);
+      width: 42px;
+      height: 22px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url('../images/dest/icons/arrow_spiler_big.png');
+      transition: transform $base-duration $base-timing;
+    }
+    &.open {
+      &::after {
+        transform: translateY(-50%) rotate(0);
+      }
+    }
+  }
+  .technologists-tabs-toggle-btn-title {
+    display: block;
+    font-size: 20px;
+    line-height: 24px;
+    color: #633c94;
+  }
+  .technologists-tabs-toggle-btn-name {
+    display: block;
+    font-size: 20px;
+    line-height: 24px;
+    color: #272727;
+  }
+  .technologists-tabs-info-inner {
+    background-color: #f4f1f7;
+    padding: 20px 30px;
+    margin-top: 20px;
+  }
+  .technologists-tabs-info-text {
+    font-size: 12px;
+    color: #272727;
+    margin-bottom: 16px;
   }
 }
