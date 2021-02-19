@@ -1,7 +1,39 @@
+$mobile-bp: 768px;
+
 .page--technologists {
   font-family: $mainfamily;
   -webkit-font-smoothing: antialiased;
-  padding: 65px 0;
+  // padding: 65px 0;
+  .technologists-sidebar-col {
+    width: 309px;
+    flex: 0 0 auto;
+    background-color: rgb(88, 44, 131);
+    @media screen and (max-width: 1080px) {
+      width: 278px;
+    }
+    @media screen and (max-width: 900px) {
+      width: 231px;
+    }
+    @media screen and (max-width: $mobile-bp) {
+      display: none;
+    }
+  }
+  .technologists-content-col {
+    flex-basis: calc(100% - 309px);
+    max-width: calc(100% - 309px);
+    @media screen and (max-width: 1080px) {
+      flex-basis: calc(100% - 278px);
+      max-width: calc(100% - 278px);
+    }
+    @media screen and (max-width: 900px) {
+      flex-basis: calc(100% - 231px);
+      max-width: calc(100% - 231px);
+    }
+    @media screen and (max-width: $mobile-bp) {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
   button,
   .btn,
   input[type='submit'] {
@@ -35,12 +67,20 @@
   }
   .btn-main--middle {
     padding: 10px 10px 12px 10px;
+    @media screen and (max-width: $mobile-bp) {
+      padding: 5px 5px 6px 5px;
+      font-size: 20px;
+    }
   }
   .btn-main--big {
     padding: 14px 10px 15px 10px;
     font-size: 24px;
     max-width: 250px;
     width: 100%;
+    @media screen and (max-width: $mobile-bp) {
+      padding: 7px 5px 7px 5px;
+      font-size: 20px;
+    }
   }
   .btn-main--small {
     padding: 6px 10px 4px 10px;
@@ -48,6 +88,10 @@
     max-width: 162px;
     width: 100%;
     font-weight: normal;
+    @media screen and (max-width: $mobile-bp) {
+      padding: 3px 5px 2px 5px;
+      font-size: 12px;
+    }
   }
   .h2-gray {
     display: block;
@@ -61,6 +105,9 @@
     font-weight: bold;
     text-transform: uppercase;
     color: $accent;
+    @media screen and (max-width: $mobile-bp) {
+      font-size: 20px;
+    }
   }
   .technologists-avatar {
     margin: 0 0 20px 5px;
@@ -69,6 +116,10 @@
     background-repeat: no-repeat;
     background-position: center;
     border: 2px solid #abc4d0;
+    @media screen and (max-width: $mobile-bp) {
+      width: 125px;
+      height: 125px;
+    }
   }
   .technologists-tabs-item {
     position: relative;
@@ -124,6 +175,9 @@
     &:hover {
       color: #592c82;
     }
+    @media screen and (max-width: $mobile-bp) {
+      font-size: 16px;
+    }
   }
   .technologists-tabs-block-h2 {
     margin-bottom: 20px;
@@ -147,9 +201,15 @@
     th {
       border-bottom: 1px solid #bfbfbf;
       padding: 4px 20px;
+      @media screen and (max-width: $mobile-bp) {
+        padding: 2px 5px;
+      }
     }
     td {
       padding: 10px 20px;
+      @media screen and (max-width: $mobile-bp) {
+        padding: 5px 5px;
+      }
     }
     a,
     button {
@@ -176,15 +236,28 @@
   }
   .row--technologists-main {
     padding: 0 0 44px 0;
+    @media screen and (max-width: 1080px) {
+      flex-wrap: wrap;
+    }
   }
   .col-technologists-control {
     flex: 0 0 calc(100% / 3);
     max-width: calc(100% / 3);
     padding-right: 20px;
+    @media screen and (max-width: 1080px) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding-right: 0;
+      margin-bottom: 20px;
+    }
   }
   .col-technologists-description {
     flex: 0 0 calc(100% / 3 * 2);
     max-width: calc(100% / 3 * 2);
+    @media screen and (max-width: 1080px) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
   }
   .report-form-block {
     padding: 30px 0;
@@ -280,6 +353,16 @@
     border-bottom: 1px solid #bfbfbf;
     margin-bottom: 18px;
   }
+  .technologists-main-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    .technologists-main-table--scroll-big {
+      min-width: 1024px;
+    }
+    .technologists-main-table--scroll-middle {
+      min-width: 700px;
+    }
+  }
   .technologists-main-table {
     width: 100%;
     margin-bottom: 20px;
@@ -318,7 +401,6 @@
   }
   .technologists-main-btn {
     width: 148px;
-    margin-top: 16px;
     margin-right: 12px;
   }
   .technologists-main-btn--right {
@@ -402,6 +484,10 @@
     font-weight: 300;
     margin-left: 15px;
     vertical-align: middle;
+    @media screen and (max-width: $mobile-bp) {
+      font-size: 16px;
+      margin-left: 10px;
+    }
   }
   .btn--technologists-table-spoiler {
     margin-top: 20px;
@@ -457,6 +543,11 @@
     flex-basis: calc((100% - 24px) / 2);
     max-width: calc((100% - 24px) / 2);
     margin-right: 24px;
+    @media screen and (max-width: $mobile-bp) {
+      flex-basis: 100%;
+      max-width: 100%;
+      margin-right: 0;
+    }
   }
   .technologists-lk-form-col {
     margin-bottom: 20px;
@@ -470,6 +561,12 @@
     margin-right: 24px;
     &:nth-child(2n) {
       margin-right: 0;
+    }
+    @media screen and (max-width: $mobile-bp) {
+      flex-basis: 100%;
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
     }
   }
   .technologists-lk-gray-wrapper {
