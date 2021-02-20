@@ -399,6 +399,13 @@ $mobile-bp: 768px;
       padding: 3px 16px;
     }
   }
+  .custom-select--certification {
+    width: 100%;
+    .select-items div,
+    .select-selected {
+      padding: 5px 20px;
+    }
+  }
   .technologists-main-btn {
     width: 148px;
     margin-right: 12px;
@@ -632,5 +639,71 @@ $mobile-bp: 768px;
     font-size: 12px;
     color: #272727;
     margin-bottom: 16px;
+  }
+  .select-technologists-wrapper {
+    position: relative;
+    display: block;
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      width: 32px;
+      height: 100%;
+      background-color: $accent;
+      pointer-events: none;
+    }
+    &::before {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-bottom: 1px solid #fff;
+      border-right: 1px solid #fff;
+      transform: translateY(-50%) rotate(45deg);
+      z-index: 1;
+      transition: transform $base-duration $base-timing;
+      pointer-events: none;
+    }
+  }
+  .select-technologists {
+    padding: 3px 16px;
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 24px;
+    border: 1px solid #bfbfbf;
+    color: #a3a3a3;
+    width: 100%;
+    &:focus {
+      outline: none;
+    }
+  }
+  .form-certification-new--wrapper {
+    display: none;
+  }
+  .form-certification-new {
+    display: flex;
+    align-items: flex-end;
+  }
+  .form-certification-text {
+    color: #272727;
+    font-size: 12px;
+    line-height: 24px;
+  }
+  .technologists-input--certification {
+    padding: 5px 20px;
+  }
+  .form-certification-col {
+    margin-right: 10px;
+  }
+  .form-certification-col--big {
+    max-width: 210px;
+    flex-grow: 1;
+  }
+  .btn-main--certification {
+    flex: 0 0 auto;
+    padding: 10px;
   }
 }
